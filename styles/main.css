@@ -1,1 +1,48 @@
 @import url(./reset.css);
+
+/* ----- FONTS ----- */
+
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 400;
+  font-style: normal;
+  src: local("TT Lakes Regular"),
+    url(../src/fonts/TTLakes-Regular.woff2) format("woff2"),
+    url(../src/fonts/TTLakes-Regular.woff) format("woff"),
+    url(../src/fonts/TTLakes-Regular.eot) format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 600;
+  font-style: normal;
+  src: local("TT Lakes Medium"),
+    url(../src/fonts/TTLakes-Medium.woff2) format("woff2"),
+    url(../src/fonts/TTLakes-Medium.woff) format("woff"),
+    url(../src/fonts/TTLakes-Medium.eot) format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 800;
+  font-style: normal;
+  src: local("TT Lakes Bold"),
+    url(../src/fonts/TTLakes-Bold.woff2) format("woff2"),
+    url(../src/fonts/TTLakes-Bold.woff) format("woff"),
+    url(../src/fonts/TTLakes-Bold.eot) format("eot");
+  font-display: swap;
+}
+
+/* ----- VARIABLES -----*/
+
+:root {
+  --main-color: #f8f8f8;
+  --secondary-color: white;
+  --theme-color: #ff3e79;
+  --text-color: #1b1c21;
+  --element-color: #41f6d7;
+}
+
+/* ----- MAIN STYLES -----*/
