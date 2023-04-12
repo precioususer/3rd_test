@@ -40,6 +40,7 @@
 
 :root {
   --desktop: 1440px;
+  --nav-width: 306px;
 
   --main-color: #f8f8f8;
   --secondary-color: white;
@@ -49,15 +50,45 @@
   --element-color: #41f6d7;
 }
 
-/* ----- ICONS ----- */
+/* ----- BUTTON's ICONS ----- */
 .icon-holder {
   display: flex;
   width: 40px;
   height: 40px;
   background-color: var(--theme-color);
   border-radius: 20px;
+  border: 0;
   justify-content: center;
   align-items: center;
+}
+
+.btn-title {
+  height: 24px;
+  left: 86.12%;
+  right: 5.54%;
+  top: calc(50% - 24px / 2 - 900.5px);
+  margin-right: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  color: var(--text-color);
+}
+
+.header-btns {
+  display: flex;
+}
+
+.header-btn {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 32px;
+  border: 0;
+  background-color: inherit;
 }
 
 .search-img {
@@ -100,213 +131,150 @@ body {
   justify-content: space-between;
 }
 
-.text {
-  font-size: 50px;
-}
-
-.block {
+main {
   display: flex;
-  background-color: #047965;
-  border-width: 2px;
-  border-color: #1b1c21;
-  border-style: solid;
-}
-
-/* ----- NAVIGATION -----*/
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  width: 306px;
   height: 100vh;
-  border-color: var(--secondary-color);
+  background-color: var(--main-color);
+  width: calc(100vw - var(--nav-width));
+
+  flex: 1;
+}
+
+.main-header {
+  display: flex;
+  width: inherit;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 42px 30px 8px 35px;
+}
+
+.title {
+  height: 40px;
+  left: 23.91%;
+  right: 59.75%;
+  top: calc(50% - 40px / 2 - 900.5px);
+
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+
+  color: var(--text-color);
+}
+
+/* ----- NAVIGATION ----- */
+
+nav {
+  display: flex;
+  min-width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--secondary-color);
+  flex-direction: column;
 }
 
 .nav-header {
   display: flex;
-  margin-left: 22px;
-  margin-top: 30px;
-  margin-right: 29px;
-  margin-bottom: 37px;
-  height: 50px;
-  width: auto;
-  justify-content: space-between;
+  margin: 30px 29px 37px 22px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   display: flex;
-  height: 50px;
-  width: 96px;
+  height: 51px;
+  width: 97px;
 }
 
-.nav-items {
+.nav-list {
   display: flex;
-  margin-bottom: 241px;
+  flex-direction: column;
+  margin: 0px auto 241px 24px;
 }
 
 .nav-item {
+  margin-top: 28px;
   display: flex;
-  margin-bottom: 28px;
-
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.2px;
+  cursor: pointer;
 }
 
-.nav-a {
-  outline: none;
-  text-decoration: none;
-  color: var(--text-color);
-  margin-left: 24px;
+.nav-item input {
+  position: absolute;
+  opacity: 0;
 }
 
-.nav-curent-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 28px;
-
-  opacity: 0.7;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-}
-
-.nav-curent-item::before {
-  content: "";
-  margin-left: 1px;
-  display: flex;
-  justify-self: self-start;
-  background-color: var(--element-color);
+.active-element {
+  background-color: var(--secondary-color);
+  border-radius: 2px;
   width: 4px;
   height: 28px;
-  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  right: 23px;
+  bottom: 0px;
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
+.page-name {
+  height: 21.23px;
 
-  margin-left: 19px;
-}
-
-.contact-icons {
-  display: flex;
-  width: 152px;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.email {
-  display: flex;
-  margin-bottom: 12px;
-
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-weight: 400;
-
-  color: var(--text-color);
-}
-
-.number {
-  display: flex;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-weight: 800;
-
-  color: var(--text-color);
-  margin-bottom: 40px;
-}
-
-.lang {
-  display: flex;
-  width: 87px;
-  justify-content: space-between;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-weight: 400;
-
-  color: var(--text-color);
-}
-
-.ru {
-  opacity: 0.7;
-}
-
-/* ----- PAGE ----- */
-
-.container {
-  display: flex;
-  background-color: var(--main-color);
-  flex: 1;
-}
-
-.header {
-  display: flex;
-  flex: 1;
-  height: 40px;
-  width: auto;
-
-  padding-right: 30px;
-  padding-top: 42px;
-  margin-bottom: 8px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.line {
-  display: flex;
-  margin-left: 2px;
-  background-color: var(--element-color);
-  height: 40px;
-  width: 3px;
-  border-radius: 1.5px;
-}
-
-.title-text {
-  display: flex;
-  margin-left: 17px;
-
-  font-size: 28px;
-  line-height: 40px;
-  letter-spacing: -0.6px;
-  font-weight: 800;
-  color: var(--text-color);
-}
-
-.options {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-}
-
-.option {
-  display: flex;
-  margin-left: 32px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.subtitle {
-  display: flex;
-  margin-right: 8px;
-
-  font-size: 16px;
   font-weight: 600;
+  font-size: 16px;
   line-height: 24px;
-  text-align: right;
   letter-spacing: -0.2px;
   color: var(--text-color);
+}
+
+.nav-item input:checked ~ .active-element {
+  background-color: var(--element-color);
+}
+
+.nav-item input:checked ~ .page-name {
+  color: var(--fade-text);
+}
+
+/* ----- MAIN ----- */
+
+/* ----- Ремонт техники ----- */
+.fix {
+  display: none;
+}
+
+/* ----- Услуги и сервисы ----- */
+.service {
+  display: none;
+  width: inherit;
+}
+
+.nav-item input:checked ~ .service {
+  display: flex;
+}
+
+/* ----- Корпоративным клиентам ----- */
+.clients {
+  display: none;
+}
+
+/* ----- Продавцам техники ----- */
+.sales {
+  display: none;
+}
+
+/* ----- Партнерам ----- */
+.partners {
+  display: none;
+}
+
+/* ----- Производителям ----- */
+.factory {
+  display: none;
+}
+
+/* ----- Наши сервисные центры ----- */
+.centers {
+  display: none;
+}
+
+/* ----- Контакты ----- */
+.contacts {
+  display: none;
 }
