@@ -44,71 +44,72 @@
     <!--    NAVIGATION   -->
 
     <nav>
-      <header class="nav-header">
-        <img src="./src/logo.png" alt="CPS" class="logo" />
-        <button class="icon-holder">
-          <img src="./src/icons/search.svg" alt="S" class="search-img" />
-        </button>
-      </header>
-      <ul class="nav-list">
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Ремонт техники</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item service-btn">
-            <input type="radio" name="radio" checked />
-            <div class="active-element"></div>
-            <h3 class="page-name">Услуги и сервисы</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Корпоративным клиентам</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Продавцам техники</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Партнерам</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Производителям</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Наши сервисные центры</h3>
-          </label>
-        </li>
-        <li>
-          <label class="nav-item">
-            <input type="radio" name="radio" />
-            <div class="active-element"></div>
-            <h3 class="page-name">Контакты</h3>
-          </label>
-        </li>
-      </ul>
-
+      <div class="nav-header-wrapper">
+        <header class="nav-header">
+          <img src="./src/logo.png" alt="CPS" class="logo" />
+          <button class="icon-holder">
+            <img src="./src/icons/search.svg" alt="S" class="search-img" />
+          </button>
+        </header>
+        <ul class="nav-list">
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Ремонт техники</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item service-btn">
+              <input class="nav-input" type="radio" name="radio" checked />
+              <div class="active-element"></div>
+              <h3 class="page-name">Услуги и сервисы</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Корпоративным клиентам</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Продавцам техники</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Партнерам</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Производителям</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Наши сервисные центры</h3>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item">
+              <input class="nav-input" type="radio" name="radio" />
+              <div class="active-element"></div>
+              <h3 class="page-name">Контакты</h3>
+            </label>
+          </li>
+        </ul>
+      </div>
       <footer class="nav-footer">
         <div class="nav-footer-btns">
           <button class="nav-footer-btn">
@@ -141,17 +142,17 @@
         <h3 class="telephone-numb">8 800 890 8900</h3>
         <div class="langs">
           <label class="lang">
-            <input type="radio" name="radio" checked />
+            <input class="lang-input" type="radio" name="radio" checked />
             <h3 class="lang-name">RU</h3>
           </label>
 
           <label class="lang">
-            <input type="radio" name="radio" />
+            <input class="lang-input" type="radio" name="radio" />
             <h3 class="lang-name">EN</h3>
           </label>
 
           <label class="lang">
-            <input type="radio" name="radio" />
+            <input class="lang-input" type="radio" name="radio" />
             <h3 class="lang-name">CH</h3>
           </label>
         </div>
@@ -161,33 +162,53 @@
     <!--    CONTENT      -->
 
     <main>
-      <div class="fix"></div>
-      <div class="service">
-        <header class="main-header">
-          <h1 class="title">Услуги и сервисы</h1>
-          <div class="header-btns">
-            <button class="header-btn">
-              <h3 class="btn-title">Оставить заявку</h3>
-              <span class="icon-holder"
-                ><img src="./src/icons/order.svg" alt="Ord" class="order-img"
-              /></span>
-            </button>
+      <div class="main-header">
+        <div class="title-wrapper">
+          <div class="title-element"></div>
 
-            <button class="header-btn">
-              <h3 class="btn-title">Статус ремонта</h3>
-              <span class="icon-holder"
-                ><img src="./src/icons/status.svg" alt="St" class="status-img"
-              /></span>
-            </button>
-          </div>
-        </header>
+          <h1 class="title">Услуги и сервисы</h1>
+        </div>
+
+        <div class="header-btns">
+          <button class="header-btn">
+            <h3 class="btn-title">Оставить заявку</h3>
+            <div class="icon-holder">
+              <img src="./src/icons/order.svg" alt="Ord" class="order-img" />
+            </div>
+          </button>
+
+          <button class="header-btn">
+            <h3 class="btn-title">Статус ремонта</h3>
+            <div class="icon-holder">
+              <img src="./src/icons/status.svg" alt="St" class="status-img" />
+            </div>
+          </button>
+        </div>
       </div>
-      <div class="clients"></div>
-      <div class="sales"></div>
-      <div class="partners"></div>
-      <div class="factory"></div>
-      <div class="centers"></div>
-      <div class="contacts"></div>
+
+      <div class="container">11111</div>
+      <div class="container">22</div>
+      <div class="container">33333333333</div>
+      <div class="container">4444</div>
+      <div class="container">55555</div>
+      <div class="container">6666666</div>
+      <div class="container">777777777</div>
+      <div class="container">8888</div>
+      <div class="container">999999</div>
+      <div class="container">10</div>
+
+      <footer class="main-footer">
+        <div class="footer-items">
+          <h3 class="footer-item">© 2019 CPS Разработано командой Apesong</h3>
+
+          <h3 class="footer-item">Политика конфиденциальности</h3>
+
+          <h3 class="footer-item">
+            Информация, размещенная на данной странице, не является публичной
+            офертой
+          </h3>
+        </div>
+      </footer>
     </main>
 
     <script src="./js/index.js"></script>

@@ -53,56 +53,14 @@
 /* ----- BUTTON's ICONS ----- */
 .icon-holder {
   display: flex;
+
   width: 40px;
   height: 40px;
   background-color: var(--theme-color);
-  border-radius: 20px;
+  border-radius: 50%;
   border: 0;
   justify-content: center;
   align-items: center;
-}
-
-.btn-title {
-  height: 24px;
-  left: 86.12%;
-  right: 5.54%;
-  top: calc(50% - 24px / 2 - 900.5px);
-  margin-right: 8px;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-
-  color: var(--text-color);
-}
-
-.header-btn {
-  display: flex;
-  height: 40px;
-  align-items: center;
-  justify-content: space-between;
-  border: 0;
-  background-color: inherit;
-  margin-left: 32px;
-}
-
-.header-btns {
-  display: flex;
-}
-
-.nav-footer-btns {
-  display: flex;
-}
-
-.nav-footer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 0;
-  background-color: inherit;
-  margin-right: 16px;
-  padding: 0;
 }
 
 .search-img {
@@ -143,8 +101,13 @@ nav {
   height: 100vh;
   background-color: var(--secondary-color);
   flex-direction: column;
-
+  justify-content: space-between;
   padding-right: 29px;
+}
+
+.nav-header-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-header {
@@ -201,19 +164,33 @@ nav {
   color: var(--text-color);
 }
 
-.nav-item input:checked ~ .active-element {
+.nav-input:checked ~ .active-element {
   background-color: var(--element-color);
 }
 
-.nav-item input:checked ~ .page-name {
+.nav-input:checked ~ .page-name {
   color: var(--fade-text);
 }
 
 .nav-footer {
   display: flex;
   flex-direction: column;
-  margin-top: 241px;
+
   margin-left: 19px;
+}
+
+.nav-footer-btns {
+  display: flex;
+}
+
+.nav-footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background-color: inherit;
+  margin-right: 16px;
+  padding: 0;
 }
 
 .e-mail {
@@ -270,39 +247,72 @@ nav {
   color: var(--text-color);
 }
 
-.lang input:checked ~ .lang-name {
+.lang-input:checked ~ .lang-name {
   color: var(--fade-text);
 }
 
 /* ----- MAIN STYLES -----*/
 
 body {
-  min-width: calc(100vw - var(--nav-width));
-
   font-family: "TT Lakes", sans-serif;
   display: flex;
-  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: chocolate;
+  margin-top: 20px;
+  margin-left: 40px;
+
+  font-size: 72px;
 }
 
 main {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   height: 100vh;
   background-color: var(--main-color);
-  width: calc(100vw - var(--nav-width));
 
   flex: 1;
 }
 
+/* ----- MAIN HEADER -----*/
+
 .main-header {
   display: flex;
-  width: inherit;
+
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+
+  min-width: calc(var(--desktop) - var(--nav-width));
+
+  margin-top: 42px;
+  margin-left: 35px;
+
+  background-color: darkgoldenrod;
+}
+
+.title-wrapper {
+  display: flex;
+}
+
+.title-element {
   height: 40px;
-  padding: 42px 30px 8px 35px;
+  width: 3px;
+  border-radius: 1.5px;
+  background-color: var(--element-color);
+
+  position: relative;
+  right: 34px;
 }
 
 .title {
+  display: flex;
   height: 40px;
   left: 23.91%;
   right: 59.75%;
@@ -314,51 +324,80 @@ main {
   letter-spacing: -0.6px;
 
   color: var(--text-color);
+
+  flex-wrap: nowrap;
 }
 
-/* ----- CONTENT ----- */
+.btn-title {
+  font-family: inherit;
+  height: 24px;
+  left: 86.12%;
+  right: 5.54%;
+  top: calc(50% - 24px / 2 - 900.5px);
+  margin-right: 8px;
 
-/* ----- Ремонт техники ----- */
-.fix {
-  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  color: var(--text-color);
 }
 
-/* ----- Услуги и сервисы ----- */
-.service {
+.header-btn {
   display: flex;
-  width: inherit;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background-color: inherit;
+  margin-left: 32px;
+  padding: 0 30px 0 0;
 }
 
-.nav-item input:checked ~ .service {
+.header-btns {
   display: flex;
 }
 
-/* ----- Корпоративным клиентам ----- */
-.clients {
-  display: none;
+/* ----- MENU -----*/
+
+/* ----- DESCRIPTION -----*/
+
+/* ----- BRANDS -----*/
+
+/* ----- EQUIPMENT -----*/
+
+/* ----- PRICES -----*/
+
+/* ----- MAIN FOOTER -----*/
+
+.main-footer {
+  display: flex;
+  margin: 83px 0px 21px 31px;
+  flex-wrap: wrap;
 }
 
-/* ----- Продавцам техники ----- */
-.sales {
-  display: none;
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  background-color: coral;
+  min-width: calc(100vw - var(--nav-width));
 }
 
-/* ----- Партнерам ----- */
-.partners {
-  display: none;
-}
+.footer-item {
+  font-weight: 400;
+  height: 32px;
+  left: 23.63%;
+  right: 61.08%;
+  top: calc(50% - 32px / 2 + 925.5px);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-color);
+  mix-blend-mode: normal;
+  opacity: 0.72;
 
-/* ----- Производителям ----- */
-.factory {
-  display: none;
-}
-
-/* ----- Наши сервисные центры ----- */
-.centers {
-  display: none;
-}
-
-/* ----- Контакты ----- */
-.contacts {
-  display: none;
+  flex-wrap: wrap;
+  width: 300px;
+  background-color: cornflowerblue;
 }
