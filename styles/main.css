@@ -77,18 +77,32 @@
   color: var(--text-color);
 }
 
-.header-btns {
-  display: flex;
-}
-
 .header-btn {
   display: flex;
   height: 40px;
   align-items: center;
   justify-content: space-between;
-  margin-left: 32px;
   border: 0;
   background-color: inherit;
+  margin-left: 32px;
+}
+
+.header-btns {
+  display: flex;
+}
+
+.nav-footer-btns {
+  display: flex;
+}
+
+.nav-footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background-color: inherit;
+  margin-right: 16px;
+  padding: 0;
 }
 
 .search-img {
@@ -121,10 +135,149 @@
   width: 16px;
 }
 
+/* ----- NAVIGATION ----- */
+
+nav {
+  display: flex;
+  min-width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--secondary-color);
+  flex-direction: column;
+
+  padding-right: 29px;
+}
+
+.nav-header {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  height: 51px;
+  width: 97px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 37px;
+  margin-left: 24px;
+}
+
+.nav-item {
+  margin-bottom: 24px;
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-item input {
+  position: absolute;
+  opacity: 0;
+}
+
+.active-element {
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+  width: 4px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
+  right: 23px;
+  bottom: 0px;
+}
+
+.page-name {
+  height: 21px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--text-color);
+}
+
+.nav-item input:checked ~ .active-element {
+  background-color: var(--element-color);
+}
+
+.nav-item input:checked ~ .page-name {
+  color: var(--fade-text);
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 241px;
+  margin-left: 19px;
+}
+
+.e-mail {
+  margin-top: 16px;
+
+  height: 24.81px;
+  left: 1.33%;
+  right: 91.23%;
+  top: calc(50% - 24.81px / 2 - 165.21px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--text-color);
+}
+
+.telephone-numb {
+  margin-top: 12px;
+
+  height: 33.08px;
+  left: 1.33%;
+  right: 84.92%;
+  top: calc(50% - 33.08px / 2 - 123.86px);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: var(--text-color);
+}
+
+.langs {
+  margin-top: 40px;
+  display: flex;
+}
+
+.lang input {
+  position: absolute;
+  opacity: 0;
+}
+
+.lang {
+  margin-right: 7px;
+}
+
+.lang-name {
+  height: 24.81px;
+  left: 1.47%;
+  right: 96.77%;
+  top: calc(50% - 24.81px / 2 - 54.1px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--text-color);
+}
+
+.lang input:checked ~ .lang-name {
+  color: var(--fade-text);
+}
+
 /* ----- MAIN STYLES -----*/
 
 body {
-  min-width: var(--desktop);
+  min-width: calc(100vw - var(--nav-width));
 
   font-family: "TT Lakes", sans-serif;
   display: flex;
@@ -163,76 +316,7 @@ main {
   color: var(--text-color);
 }
 
-/* ----- NAVIGATION ----- */
-
-nav {
-  display: flex;
-  min-width: var(--nav-width);
-  height: 100vh;
-  background-color: var(--secondary-color);
-  flex-direction: column;
-}
-
-.nav-header {
-  display: flex;
-  margin: 30px 29px 37px 22px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  height: 51px;
-  width: 97px;
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0px auto 241px 24px;
-}
-
-.nav-item {
-  margin-top: 28px;
-  display: flex;
-  cursor: pointer;
-}
-
-.nav-item input {
-  position: absolute;
-  opacity: 0;
-}
-
-.active-element {
-  background-color: var(--secondary-color);
-  border-radius: 2px;
-  width: 4px;
-  height: 28px;
-  position: relative;
-  z-index: 1;
-  right: 23px;
-  bottom: 0px;
-}
-
-.page-name {
-  height: 21.23px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: var(--text-color);
-}
-
-.nav-item input:checked ~ .active-element {
-  background-color: var(--element-color);
-}
-
-.nav-item input:checked ~ .page-name {
-  color: var(--fade-text);
-}
-
-/* ----- MAIN ----- */
+/* ----- CONTENT ----- */
 
 /* ----- Ремонт техники ----- */
 .fix {
@@ -241,7 +325,7 @@ nav {
 
 /* ----- Услуги и сервисы ----- */
 .service {
-  display: none;
+  display: flex;
   width: inherit;
 }
 
