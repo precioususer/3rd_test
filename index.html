@@ -7,9 +7,11 @@
 
     <title>CPS</title>
 
+    <!-- ----- STYLES ----- -->
+
     <link rel="stylesheet" href="./styles/main.css" />
 
-    <!-- FAVICONS -->
+    <!-- ----- FAVICONS ----- -->
 
     <link
       rel="icon"
@@ -41,16 +43,118 @@
     <link rel="manifest" href="./src/favicon/site.webmanifest" />
   </head>
   <body>
-    <!--    NAVIGATION   -->
+    <!-- ----- CONTENT BLOCK 320/360 ----- -->
 
-    <nav>
-      <div class="nav-header-wrapper">
-        <header class="nav-header">
-          <img src="./src/logo.png" alt="CPS" class="logo" />
-          <button class="icon-holder">
-            <img src="./src/icons/search.svg" alt="S" class="search-img" />
+    <div class="container320_360">
+      <header class="header">
+        <button class="burger">
+          <div class="icon-holder">
+            <img src="./src/icons/menu.svg" alt="M" class="menu-img" />
+          </div>
+        </button>
+
+        <a href="./index.html" class="logo-fef"
+          ><img src="./src/logo.png" alt="LOGO" class="logo" />
+        </a>
+
+        <div class="bar"></div>
+
+        <button class="header-btn">
+          <div class="icon-holder">
+            <img src="./src/icons/order.svg" alt="Ord" class="order-img" />
+          </div>
+        </button>
+
+        <button class="header-btn">
+          <div class="icon-holder">
+            <img src="./src/icons/status.svg" alt="Stat" class="status-img" />
+          </div>
+        </button>
+      </header>
+      <main class="main">
+        <h1 class="page-title container">Услуги и сервисы</h1>
+
+        <div class="carousel container">тут будет каруселька</div>
+
+        <div class="description container">
+          <p class="descr-text">
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+          </p>
+          <button class="expand-btn">
+            <div class="expand-icon-holder">
+              <img src="./src/icons/expand.svg" alt="exp" class="expand-img" />
+            </div>
+            <h3 class="expand-text">Читать далее</h3>
           </button>
-        </header>
+        </div>
+
+        <img src="./src/front-img.png" alt="Example image" class="descr-img" />
+
+        <div class="wrapper">
+          <h1 class="wrapper-title">Ремонт техники различных брендов</h1>
+          <div class="brands-carousel container">И тут ещё одна каруселька</div>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="wrapper-title">Ремонт различных видов техники</h1>
+          <div class="brands-carousel container">И тут ещё одна каруселька</div>
+        </div>
+
+        <div class="wrapper">
+          <h1 class="wrapper-title">Цены на услуги</h1>
+          <div class="brands-carousel container">И тут ещё одна каруселька</div>
+
+          <div class="offer container">
+            <p class="offer-descr">
+              Все цены указаны с учетом НДС.<br />Стоимость ремонта указана на
+              единичную услугу. Для получения коммерческого предложения на
+              постоянное обслуживание, оставьте заявку.
+            </p>
+            <button class="offer-btn">
+              <p class="offer-btn-title">Получить коммерческое предложение</p>
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="develop">© 2019 CPS<br />Разработано командой Apesong</p>
+        <a href="#" class="polit">Политика конфиденциальности</a>
+        <p class="info">
+          Информация, размещенная на данной странице, не является публичной
+          офертой
+        </p>
+      </footer>
+    </div>
+
+    <!-- ----- NAVIGATION BLOCK 320/360 ----- -->
+
+    <div class="nav-container320_360">
+      <header class="nav-header nav-container">
+        <div class="nav-head-left-side">
+          <button class="nav-close-btn">
+            <div class="icon-holder">
+              <img src="./src/icons/close.svg" alt="X" class="close-img" />
+            </div>
+          </button>
+          <img src="./src/logo.png" alt="CPS LOGO" class="logo" />
+        </div>
+
+        <div class="nav-head-right-side">
+          <button class="search-btn">
+            <div class="icon-holder">
+              <img
+                src="./src/icons/search.svg"
+                alt="Search"
+                class="search-img"
+              />
+            </div>
+          </button>
+        </div>
+      </header>
+
+      <main class="nav-main nav-container">
         <ul class="nav-list">
           <li>
             <label class="nav-item">
@@ -109,108 +213,63 @@
             </label>
           </li>
         </ul>
-      </div>
-      <footer class="nav-footer">
-        <div class="nav-footer-btns">
-          <button class="nav-footer-btn">
-            <span class="icon-holder">
-              <img src="./src/icons/phone.svg" alt="Ph" class="phone-img" />
-            </span>
-          </button>
+      </main>
 
-          <button class="nav-footer-btn">
-            <span class="icon-holder"
-              ><img
+      <footer class="nav-footer nav-container">
+        <div class="footer-btns">
+          <button class="contact-btn">
+            <div class="icon-holder">
+              <img src="./src/icons/phone.svg" alt="Phone" class="phone-img" />
+            </div>
+          </button>
+          <button class="feedback-btn">
+            <div class="icon-holder">
+              <img
                 src="./src/icons/feedback.svg"
-                alt="Fb"
+                alt="FdBk"
                 class="feedback-img"
-            /></span>
+              />
+            </div>
           </button>
-
-          <button class="nav-footer-btn">
-            <span class="icon-holder">
+          <button class="profile-btn">
+            <div class="icon-holder">
               <img
                 src="./src/icons/profile.svg"
-                alt="Prf"
+                alt="Prof"
                 class="profile-img"
               />
-            </span>
-          </button>
-        </div>
-
-        <h3 class="e-mail">mail@cps.com</h3>
-        <h3 class="telephone-numb">8 800 890 8900</h3>
-        <div class="langs">
-          <label class="lang">
-            <input class="lang-input" type="radio" name="radio" checked />
-            <h3 class="lang-name">RU</h3>
-          </label>
-
-          <label class="lang">
-            <input class="lang-input" type="radio" name="radio" />
-            <h3 class="lang-name">EN</h3>
-          </label>
-
-          <label class="lang">
-            <input class="lang-input" type="radio" name="radio" />
-            <h3 class="lang-name">CH</h3>
-          </label>
-        </div>
-      </footer>
-    </nav>
-
-    <!--    CONTENT      -->
-
-    <main>
-      <div class="main-header">
-        <div class="title-wrapper">
-          <div class="title-element"></div>
-
-          <h1 class="title">Услуги и сервисы</h1>
-        </div>
-
-        <div class="header-btns">
-          <button class="header-btn">
-            <h3 class="btn-title">Оставить заявку</h3>
-            <div class="icon-holder">
-              <img src="./src/icons/order.svg" alt="Ord" class="order-img" />
-            </div>
-          </button>
-
-          <button class="header-btn">
-            <h3 class="btn-title">Статус ремонта</h3>
-            <div class="icon-holder">
-              <img src="./src/icons/status.svg" alt="St" class="status-img" />
             </div>
           </button>
         </div>
-      </div>
 
-      <div class="container">11111</div>
-      <div class="container">22</div>
-      <div class="container">33333333333</div>
-      <div class="container">4444</div>
-      <div class="container">55555</div>
-      <div class="container">6666666</div>
-      <div class="container">777777777</div>
-      <div class="container">8888</div>
-      <div class="container">999999</div>
-      <div class="container">10</div>
+        <h3 class="email">mail@cps.com</h3>
 
-      <footer class="main-footer">
-        <div class="footer-items">
-          <h3 class="footer-item">© 2019 CPS Разработано командой Apesong</h3>
+        <h3 class="phone-number">8 800 890 8900</h3>
 
-          <h3 class="footer-item">Политика конфиденциальности</h3>
-
-          <h3 class="footer-item">
-            Информация, размещенная на данной странице, не является публичной
-            офертой
-          </h3>
-        </div>
+        <ul class="lang-selection">
+          <li>
+            <label class="lang-item">
+              <input class="lang-input" type="radio" name="radio" />
+              <h3 class="lang-name">RU</h3>
+            </label>
+          </li>
+          <li>
+            <label class="lang-item">
+              <input class="lang-input" type="radio" name="radio" />
+              <h3 class="lang-name">EN</h3>
+            </label>
+          </li>
+          <li>
+            <label class="lang-item">
+              <input class="lang-input" type="radio" name="radio" />
+              <h3 class="lang-name">CH</h3>
+            </label>
+          </li>
+        </ul>
       </footer>
-    </main>
+    </div>
 
+    <!-- ----- JS SCRIPT ----- -->
     <script src="./js/index.js"></script>
   </body>
 </html>
