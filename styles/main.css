@@ -136,25 +136,42 @@ button {
 /* ----- CONTENT ----- */
 
 .container320_360 {
-  position: absolute;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  height: 100vh;
 }
 
 /* ----- HEADER ----- */
+.container {
+  display: flex;
+  padding-left: var(--container-padding);
+}
 
 .header {
   display: flex;
-  align-items: center;
-  min-width: 100vw;
-  padding-top: 18px;
-  padding-bottom: 18px;
-
-  justify-content: space-around;
+  min-width: calc(100vw - var(--container-padding) * 2);
+  padding: 18px var(--container-padding);
+  gap: 16px;
+  justify-content: space-between;
 
   border-style: solid;
   background-color: var(--secondary-color);
   border-bottom-width: 1px;
   border-color: var(--fade-element-color);
+}
+
+.header-head-left-side {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-head-right-side {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .burger {
@@ -194,11 +211,6 @@ button {
   background-color: var(--main-color);
 }
 
-.container {
-  display: flex;
-  padding-left: var(--container-padding);
-}
-
 .page-title {
   padding-top: 24px;
   height: 40px;
@@ -233,13 +245,10 @@ button {
 
 .description {
   padding-top: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .descr-text {
-  height: 90px;
-  left: 5%;
-  right: 5%;
   top: calc(50% - 90px / 2 - 620px);
   font-weight: 400;
   font-size: 14px;
@@ -251,7 +260,6 @@ button {
 .expand-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 16px 0px 0px 0px;
   background-color: inherit;
   border: 0;
@@ -293,8 +301,6 @@ button {
   padding: 16px;
   width: 100vw;
 
-  height: 48px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -318,7 +324,7 @@ button {
 
 .offer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   padding-top: 16px;
 }
@@ -435,10 +441,13 @@ button {
 /* ----- NAVIGATION ----- */
 
 .nav-container320_360 {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   position: fixed;
   height: 100vh;
-  z-index: 0;
 }
 
 /* ----- NAVIGATION HEADER ----- */
@@ -450,6 +459,7 @@ button {
 
 .nav-header {
   display: flex;
+  align-self: flex-start;
   justify-content: space-between;
   align-items: center;
   width: calc(100vw - var(--container-padding) * 2);
@@ -489,7 +499,7 @@ button {
 
 .nav-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -497,6 +507,7 @@ button {
   display: flex;
   align-items: center;
   height: 32px;
+  width: 100vw;
 }
 
 .active-element {
@@ -610,9 +621,3 @@ button {
 }
 
 /* ----- MEDIA QUERY ----- */
-
-@media (min-width: 400px) {
-  .container-nav320_360 {
-    display: none;
-  }
-}
