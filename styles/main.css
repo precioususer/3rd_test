@@ -728,6 +728,7 @@ textarea {
 .modal-bigger-input {
   height: 118px;
   padding-top: 10px;
+  width: calc(100% - var(--container-padding) * 2);
 }
 
 .modal-input:placeholder-shown {
