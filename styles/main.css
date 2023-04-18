@@ -49,7 +49,7 @@
   --fade-element-color: #41f6d881;
 }
 
-/* ----- BUTTON's ICONS ----- */
+/* ----- ICONS ----- */
 
 .search-img {
   height: 17px;
@@ -117,6 +117,102 @@
   width: 96px;
 }
 
+/* ----- BUTTONS ----- */
+
+button {
+  font-family: "TT Lakes";
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+/*
+.close-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+.call-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+.feedback-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+.profile-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+.search-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+
+.menu-btn {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+*/
+
+.expand-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  background-color: inherit;
+  border: 0;
+}
+
+.offer-btn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 192px;
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.long-send-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  height: 32px;
+  width: 136px;
+  background-color: var(--theme-color);
+  border-radius: 16px;
+}
+
+.long-send-btn-title {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.long-send-btn-title::after {
+  content: "";
+  display: block;
+  margin-left: 12px;
+  background-image: url(./../src/icons/white-arrow.svg);
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 8px;
+}
+
 /* ----- BODY ----- */
 
 body {
@@ -125,12 +221,13 @@ body {
   flex-wrap: wrap;
 }
 
-button {
-  font-family: "TT Lakes";
+textarea {
+  resize: none;
 }
 
-.none {
-  display: none;
+.container {
+  display: flex;
+  padding-left: var(--container-padding);
 }
 
 /* ----- CONTENT ----- */
@@ -144,10 +241,6 @@ button {
 }
 
 /* ----- HEADER ----- */
-.container {
-  display: flex;
-  padding-left: var(--container-padding);
-}
 
 .header {
   display: flex;
@@ -172,13 +265,6 @@ button {
   display: flex;
   gap: 16px;
   align-items: center;
-}
-
-.burger {
-  display: flex;
-  border: 0;
-  background-color: inherit;
-  padding: 0;
 }
 
 .logo-ref {
@@ -213,11 +299,6 @@ button {
 
 .page-title {
   padding-top: 24px;
-  height: 40px;
-  left: 5%;
-  right: 5%;
-  top: calc(50% - 40px / 2 - 773px);
-
   font-weight: 800;
   font-size: 28px;
   line-height: 40px;
@@ -255,14 +336,6 @@ button {
   line-height: 18px;
   letter-spacing: 0.2px;
   color: var(--text-color);
-}
-
-.expand-btn {
-  display: flex;
-  align-items: center;
-  padding: 16px 0px 0px 0px;
-  background-color: inherit;
-  border: 0;
 }
 
 .expand-icon-holder {
@@ -336,16 +409,6 @@ button {
   line-height: 20px;
   letter-spacing: 0.2px;
   color: var(--text-color);
-}
-
-.offer-btn {
-  display: flex;
-  flex-wrap: wrap;
-  width: 192px;
-  border: 0;
-  background-color: inherit;
-  padding: 0;
-  margin-top: 16px;
 }
 
 .offer-btn::after {
@@ -472,23 +535,10 @@ button {
   gap: 16px;
 }
 
-.nav-close-btn {
-  border: 0;
-  background-color: inherit;
-  padding: 0;
-}
-
 .nav-head-right-side {
   display: flex;
   align-content: center;
   margin-left: 16px;
-}
-
-.search-btn {
-  display: flex;
-  border: 0;
-  background-color: inherit;
-  padding: 0;
 }
 
 /* ----- NAVIGATION MAIN ----- */
@@ -555,24 +605,6 @@ button {
   gap: 16px;
 }
 
-.contact-btn {
-  border: 0;
-  background-color: inherit;
-  padding: 0;
-}
-
-.feedback-btn {
-  border: 0;
-  background-color: inherit;
-  padding: 0;
-}
-
-.profile-btn {
-  border: 0;
-  background-color: inherit;
-  padding: 0;
-}
-
 .email {
   padding-top: 16px;
   font-weight: 600;
@@ -620,4 +652,131 @@ button {
   color: var(--fade-text);
 }
 
+/* ----- MODAL -----  */
+
+.modal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  position: fixed;
+  height: 100vh;
+  padding: 0 var(--container-padding);
+}
+
+/* ----- MODAL HEADER ----- */
+
+.modal-header {
+  display: flex;
+  padding-top: 24px;
+  align-self: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - var(--container-padding) * 2);
+}
+
+/* ----- MODAL MAIN ----- */
+
+.modal-title {
+  display: flex;
+  padding-top: 24px;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+
+  color: var(--text-color);
+}
+
+.modal-title::before {
+  display: block;
+  position: relative;
+  content: "";
+  right: 16px;
+  height: 40px;
+  width: 4px;
+  background-color: var(--element-color);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.modal-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input {
+  display: flex;
+  align-items: flex-start;
+  height: 48px;
+  background: var(--secondary-color);
+  border: 1px solid #00000025;
+  border-radius: 8px;
+  padding: 0px 16px;
+  margin-top: 16px;
+
+  font-family: "TT Lakes";
+  text-align: top;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--text-color);
+}
+
+.modal-bigger-input {
+  height: 118px;
+  padding-top: 10px;
+}
+
+.modal-input:placeholder-shown {
+  padding-left: 16px;
+}
+
+.modal-input::placeholder {
+  color: var(--fade-text);
+  margin-left: 16px;
+}
+
+/* ----- MODAL FOOTER ----- */
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.modal-footer-descr {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--fade-text);
+}
+
+.footer-ref {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+
+.send-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* ----- ORDER CALL ----- */
+
 /* ----- MEDIA QUERY ----- */
+
+/* ----- support ----- */
+.none {
+  display: none;
+}
+
+.block {
+  display: flex;
+  background-color: #3ead3b;
+  width: 100vw;
+  height: 200px;
+}

@@ -49,9 +49,14 @@
       <div>
         <header class="header">
           <div class="header-head-left-side">
-            <button class="burger">
-              <div class="icon-holder">
-                <img src="./src/icons/menu.svg" alt="M" class="menu-img" />
+            <button id="menu-btn" class="menu-btn">
+              <div id="menu-btn" class="icon-holder">
+                <img
+                  id="menu-btn"
+                  src="./src/icons/menu.svg"
+                  alt="M"
+                  class="menu-img"
+                />
               </div>
             </button>
 
@@ -136,7 +141,9 @@
                 постоянное обслуживание, оставьте заявку.
               </p>
               <button class="offer-btn">
-                <p class="offer-btn-title">Получить коммерческое предложение</p>
+                <p class="offer-btn-title">
+                  Получить коммерческое<br />предложение
+                </p>
               </button>
             </div>
           </div>
@@ -154,13 +161,18 @@
 
     <!-- ----- NAVIGATION BLOCK 320/360 ----- -->
 
-    <div class="nav-container320_360">
+    <div class="nav-container320_360 none">
       <div>
         <header class="nav-header nav-container">
           <div class="nav-head-left-side">
-            <button class="nav-close-btn">
-              <div class="icon-holder">
-                <img src="./src/icons/close.svg" alt="X" class="close-img" />
+            <button id="nav-close-btn" class="close-btn">
+              <div id="nav-close-btn" class="icon-holder">
+                <img
+                  id="nav-close-btn"
+                  src="./src/icons/close.svg"
+                  alt="X"
+                  class="close-img"
+                />
               </div>
             </button>
             <img src="./src/logo.png" alt="CPS LOGO" class="logo" />
@@ -243,23 +255,30 @@
 
       <footer class="nav-footer nav-container">
         <div class="footer-btns">
-          <button class="contact-btn">
-            <div class="icon-holder">
-              <img src="./src/icons/phone.svg" alt="Phone" class="phone-img" />
+          <button id="call-btn" class="call-btn">
+            <div id="call-btn" class="icon-holder">
+              <img
+                id="call-btn"
+                src="./src/icons/phone.svg"
+                alt="Phone"
+                class="phone-img"
+              />
             </div>
           </button>
-          <button class="feedback-btn">
-            <div class="icon-holder">
+          <button id="feedback-btn" class="feedback-btn">
+            <div id="feedback-btn" class="icon-holder">
               <img
+                id="feedback-btn"
                 src="./src/icons/feedback.svg"
                 alt="FdBk"
                 class="feedback-img"
               />
             </div>
           </button>
-          <button class="profile-btn">
-            <div class="icon-holder">
+          <button id="profile-btn" class="profile-btn">
+            <div id="profile-btn" class="icon-holder">
               <img
+                id="profile-btn"
                 src="./src/icons/profile.svg"
                 alt="Prof"
                 class="profile-img"
@@ -295,7 +314,93 @@
       </footer>
     </div>
 
-    <!-- ----- JS SCRIPT ----- -->
+    <!-- ----- ORDER CALL 320/360 ----- -->
+
+    <div class="order-call-container320_360 modal none">
+      <header class="modal-header">
+        <button id="modal-close-btn" class="close-btn">
+          <div id="modal-close-btn" class="icon-holder">
+            <img
+              id="modal-close-btn"
+              src="./src/icons/close.svg"
+              alt="X"
+              class="close-img"
+            />
+          </div>
+        </button>
+      </header>
+
+      <main class="modal-main">
+        <h1 class="modal-title">Заказать звонок</h1>
+        <div class="modal-inputs">
+          <input type="text" class="modal-input" placeholder="Телефон" />
+        </div>
+      </main>
+
+      <footer class="modal-footer">
+        <p class="modal-footer-descr">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="footer-ref">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#" class="footer-ref">политикой конфиденциальности</a>
+        </p>
+        <div class="send-btn">
+          <button class="long-send-btn">
+            <h3 class="long-send-btn-title">Отправить</h3>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- FEED BACK 320/360 ----- -->
+
+    <div class="feedback-container320_360 modal none">
+      <header class="modal-header">
+        <button id="modal-close-btn" class="close-btn">
+          <div id="modal-close-btn" class="icon-holder">
+            <img
+              id="modal-close-btn"
+              src="./src/icons/close.svg"
+              alt="X"
+              class="close-img"
+            />
+          </div>
+        </button>
+      </header>
+
+      <main class="modal-main">
+        <h1 class="modal-title">Заказать звонок</h1>
+        <div class="modal-inputs">
+          <input type="text" class="modal-input" placeholder="Имя" />
+          <input type="text" class="modal-input" placeholder="Телефон" />
+          <input
+            type="text"
+            class="modal-input"
+            placeholder="Электронная почта"
+          />
+        </div>
+        <textarea
+          placeholder="Сообщение"
+          class="modal-input modal-bigger-input"
+        ></textarea>
+      </main>
+
+      <footer class="modal-footer">
+        <p class="modal-footer-descr">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="footer-ref">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#" class="footer-ref">политикой конфиденциальности</a>
+        </p>
+        <div class="send-btn">
+          <button class="long-send-btn">
+            <h3 class="long-send-btn-title">Отправить</h3>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- JS SCRIPT 320/360 ----- -->
     <script src="./js/index.js"></script>
   </body>
 </html>
