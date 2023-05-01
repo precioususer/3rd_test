@@ -213,8 +213,6 @@ button {
 body {
   font-family: "TT Lakes";
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 textarea {
@@ -343,6 +341,14 @@ textarea {
   line-height: 18px;
   letter-spacing: 0.2px;
   color: var(--text-color);
+}
+
+.descr-text-768 {
+  display: none;
+}
+
+.descr-text-1440 {
+  display: none;
 }
 
 .expand-icon-holder {
@@ -830,10 +836,23 @@ textarea {
     text-align: right;
     width: 213px;
   }
+
+  .lang-selection {
+    padding-top: 40px;
+  }
+
+  .modal {
+    position: fixed;
+    left: calc(100vw - 440px);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
   .aditional-768 {
+    display: flex;
+  }
+
+  .descr-text-768 {
     display: flex;
   }
 }
@@ -852,6 +871,7 @@ textarea {
     max-width: 305px;
     min-width: 305px;
     box-shadow: none;
+    position: fixed;
   }
 
   .nav-none {
@@ -915,8 +935,25 @@ textarea {
     height: 307px;
   }
 
+  .descr-text-1440 {
+    display: flex;
+  }
+
   .container320_360 {
-    left: 0px;
+    width: calc(100vw - 305px);
+  }
+
+  .descr-img-768 {
+    width: auto;
+    height: 307px;
+    margin-right: var(--container-padding);
+  }
+
+  .nav-container320_360 {
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    z-index: 0;
   }
 }
 
