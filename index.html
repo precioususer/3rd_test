@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.5" />
+    <meta name="viewport" content="width=device-width, initial-scale=2" />
 
     <title>CPS</title>
 
@@ -46,7 +46,7 @@
     <!-- ----- CONTENT BLOCK 320/360 ----- -->
 
     <div class="container320_360">
-      <div>
+      <div class="content-top">
         <header class="header">
           <div class="header-head-left-side">
             <button id="menu-btn" class="menu-btn">
@@ -60,12 +60,47 @@
               </div>
             </button>
 
+            <div class="bar aditional-768"></div>
+
             <a href="./index.html" class="logo-fef"
               ><img src="./src/logo.png" alt="LOGO" class="logo" />
             </a>
           </div>
 
           <div class="header-head-right-side">
+            <div class="footer-btns aditional-768">
+              <button id="call-btn" class="call-btn">
+                <div id="call-btn" class="icon-holder">
+                  <img
+                    id="call-btn"
+                    src="./src/icons/phone.svg"
+                    alt="Phone"
+                    class="phone-img"
+                  />
+                </div>
+              </button>
+              <button id="feedback-btn" class="feedback-btn">
+                <div id="feedback-btn" class="icon-holder">
+                  <img
+                    id="feedback-btn"
+                    src="./src/icons/feedback.svg"
+                    alt="FdBk"
+                    class="feedback-img"
+                  />
+                </div>
+              </button>
+              <button id="profile-btn" class="profile-btn">
+                <div id="profile-btn" class="icon-holder">
+                  <img
+                    id="profile-btn"
+                    src="./src/icons/profile.svg"
+                    alt="Prof"
+                    class="profile-img"
+                  />
+                </div>
+              </button>
+            </div>
+
             <div class="bar"></div>
 
             <button class="header-btn">
@@ -86,33 +121,60 @@
           </div>
         </header>
         <main class="main">
-          <h1 class="page-title container">Услуги и сервисы</h1>
+          <div class="main-header">
+            <h1 class="page-title container">Услуги и сервисы</h1>
+            <div class="main-header-btns-1440">
+              <button class="header-btn header-btn-1440">
+                <h3 class="header-btn-title-1440">Оставить заявку</h3>
+                <div class="icon-holder">
+                  <img
+                    src="./src/icons/order.svg"
+                    alt="Ord"
+                    class="order-img"
+                  />
+                </div>
+              </button>
+
+              <button class="header-btn header-btn-1440">
+                <h3 class="header-btn-title-1440">Статус ремонта</h3>
+                <div class="icon-holder">
+                  <img
+                    src="./src/icons/status.svg"
+                    alt="Stat"
+                    class="status-img"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
 
           <div class="carousel container">тут будет каруселька</div>
 
-          <div class="description container">
-            <p class="descr-text">
-              Мы являемся авторизованным сервисным центром по ремонту техники
-              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-              официальной гарантией производителя.
-            </p>
-            <button class="expand-btn">
-              <div class="expand-icon-holder">
-                <img
-                  src="./src/icons/expand.svg"
-                  alt="exp"
-                  class="expand-img"
-                />
-              </div>
-              <h3 class="expand-text">Читать далее</h3>
-            </button>
-          </div>
+          <div class="description-768">
+            <div class="description container">
+              <p class="descr-text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <button class="expand-btn">
+                <div class="expand-icon-holder">
+                  <img
+                    src="./src/icons/expand.svg"
+                    alt="exp"
+                    class="expand-img"
+                  />
+                </div>
+                <h3 class="expand-text">Читать далее</h3>
+              </button>
+            </div>
 
-          <img
-            src="./src/front-img.png"
-            alt="Example image"
-            class="descr-img"
-          />
+            <img
+              src="./src/front-img.png"
+              alt="Example image"
+              class="descr-img descr-img-768"
+            />
+          </div>
 
           <div class="wrapper">
             <h1 class="wrapper-title">Ремонт техники различных брендов</h1>
@@ -136,23 +198,29 @@
 
             <div class="offer container">
               <p class="offer-descr">
-                Все цены указаны с учетом НДС.<br />Стоимость ремонта указана на
+                Все цены указаны с учетом НДС. Стоимость ремонта указана на
                 единичную услугу. Для получения коммерческого предложения на
                 постоянное обслуживание, оставьте заявку.
               </p>
               <button class="offer-btn">
                 <p class="offer-btn-title">
-                  Получить коммерческое<br />предложение
+                  Получить коммерческое предложение<img
+                    src="./src/icons/arrow.svg"
+                    alt=">"
+                    class="offer-btn-img"
+                  />
                 </p>
               </button>
             </div>
           </div>
         </main>
       </div>
-      <footer class="footer">
-        <p class="develop">© 2019 CPS<br />Разработано командой Apesong</p>
-        <a href="#" class="polit">Политика конфиденциальности</a>
-        <p class="info">
+      <footer class="footer footer-768">
+        <p class="develop develop-768">
+          © 2019 CPS<br />Разработано командой Apesong
+        </p>
+        <a href="#" class="polit polit-768">Политика конфиденциальности</a>
+        <p class="info info-768">
           Информация, размещенная на данной странице, не является публичной
           офертой
         </p>
@@ -160,9 +228,9 @@
     </div>
 
     <!-- ----- NAVIGATION BLOCK 320/360 ----- -->
-
+    <div class="nav-bc fade"></div>
     <div class="nav-container320_360 none">
-      <div>
+      <div class="nav-top">
         <header class="nav-header nav-container">
           <div class="nav-head-left-side">
             <button id="nav-close-btn" class="close-btn">
@@ -194,57 +262,57 @@
         <main class="nav-main nav-container">
           <ul class="nav-list">
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Ремонт техники</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item service-btn">
-                <input class="nav-input" type="radio" name="radio" checked />
+              <label for="nav-list" class="nav-item service-btn">
+                <input class="nav-input" type="radio" name="nav-list" checked />
                 <div class="active-element"></div>
                 <h3 class="page-name">Услуги и сервисы</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Корпоративным клиентам</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Продавцам техники</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Партнерам</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Производителям</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Наши сервисные центры</h3>
               </label>
             </li>
             <li>
-              <label class="nav-item">
-                <input class="nav-input" type="radio" name="radio" />
+              <label for="nav-list" class="nav-item">
+                <input class="nav-input" type="radio" name="nav-list" />
                 <div class="active-element"></div>
                 <h3 class="page-name">Контакты</h3>
               </label>
@@ -293,20 +361,20 @@
 
         <ul class="lang-selection">
           <li>
-            <label class="lang-item">
-              <input class="lang-input" type="radio" name="radio" />
+            <label for="langs" class="lang-item">
+              <input class="lang-input" type="radio" name="langs" />
               <h3 class="lang-name">RU</h3>
             </label>
           </li>
           <li>
-            <label class="lang-item">
-              <input class="lang-input" type="radio" name="radio" />
+            <label for="langs" class="lang-item">
+              <input class="lang-input" type="radio" name="langs" />
               <h3 class="lang-name">EN</h3>
             </label>
           </li>
           <li>
-            <label class="lang-item">
-              <input class="lang-input" type="radio" name="radio" />
+            <label for="langs" class="lang-item">
+              <input class="lang-input" type="radio" name="langs" />
               <h3 class="lang-name">CH</h3>
             </label>
           </li>
@@ -315,10 +383,10 @@
     </div>
 
     <!-- ----- ORDER CALL 320/360 ----- -->
-
+    <div class="modal-bc fade"></div>
     <div class="order-call-container320_360 modal none">
       <header class="modal-header">
-        <button id="modal-close-btn" class="close-btn">
+        <button id="modal-close-btn" class="close-btn close-btn-768">
           <div id="modal-close-btn" class="icon-holder">
             <img
               id="modal-close-btn"
@@ -356,7 +424,7 @@
 
     <div class="feedback-container320_360 modal none">
       <header class="modal-header">
-        <button id="modal-close-btn" class="close-btn">
+        <button id="modal-close-btn" class="close-btn close-btn-768">
           <div id="modal-close-btn" class="icon-holder">
             <img
               id="modal-close-btn"
@@ -369,7 +437,7 @@
       </header>
 
       <main class="modal-main">
-        <h1 class="modal-title">Заказать звонок</h1>
+        <h1 class="modal-title">Обратная связь</h1>
         <div class="modal-inputs">
           <input type="text" class="modal-input" placeholder="Имя" />
           <input type="text" class="modal-input" placeholder="Телефон" />
